@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int zamiana(int aa, int bb)
+void zamiana(int *a, int *b)
 {
-  aa=aa^bb;
-  bb=aa^bb;
-  aa=aa^bb;
-  printf("Liczby po zamianie to a=%d i b=%d\n", aa, bb);
+  *a=*a^*b;
+  *b=*a^*b;
+  *a=*a^*b;
+
+
 }
 
 int main()
@@ -16,11 +17,10 @@ int main()
   scanf("%d", &a);
   printf("Podaj liczbę b: ");
   scanf("%d", &b);
-  const int aa=a;
-  const int bb=b;
 
-  zamiana(aa,bb);
 
+  zamiana(&a,&b);
+printf("Liczby po zamianie to a=%d i b=%d\n", a, b);
 
   return 0;
 }
