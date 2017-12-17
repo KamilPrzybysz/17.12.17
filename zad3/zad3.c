@@ -1,32 +1,32 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int suma(int a, int b)
+int suma(int a, int b, int *d)
 {
   int aa=a;
   int bb=b;
   int i;
-  int suma=0;
+  int suma_d=0;
   for(i=aa; i<=bb; i++)
   {
-    suma+=i;
+    suma_d+=i;
   }
-  printf("Suma liczb z tego przedziału to: %d\n", suma);
-
+  
+  *d=suma_d;
 }
 
-int kwadrat(int a, int b)
+int kwadrat(int a, int b, int *k)
 {
   int aa=a;
   int bb=b;
   int i;
-  int suma=0;
+  int suma_k=0;
   for(i=aa; i<=bb; i++)
   {
-    suma=i*i+suma;
+    suma_k=i*i+suma_k;
   }
-  printf("Suma kwadratów liczb z tego przedziału to: %d\n", suma);
 
+  *k=suma_k;
 }
 
 int main()
@@ -46,8 +46,13 @@ int main()
   }
   const int a=poczatek;
   const int b=koniec;
-  suma(a,b);
-  kwadrat(a,b);
+  int suma_d;
+  int suma_k;
+  suma(a,b, &suma_d);
+  kwadrat(a,b, &suma_k);
+
+  printf("Suma liczb z tego przedziału to: %d\n", suma_d);
+  printf("Suma liczb z tego przedziału to: %d\n", suma_k);
 
   return 0;
 }
