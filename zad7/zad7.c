@@ -20,7 +20,7 @@ int main()
 
 
   zamiana(&a,&b);
-printf("Liczby po zamianie to a=%d i b=%d\n", a, b);
+  printf("Liczby po zamianie to a=%d i b=%d\n", a, b);
 
   return 0;
 }

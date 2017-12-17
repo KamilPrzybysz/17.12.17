@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int sprawdzanko(int x)
+int spr(int x)
 {
   int k=1;
   int n=x;
@@ -23,7 +23,7 @@ int main()
   {
     scanf("%d",&liczba);
   }
-  sprawdzanko(liczba);
+  spr(liczba);
 
   return 0;
 }
