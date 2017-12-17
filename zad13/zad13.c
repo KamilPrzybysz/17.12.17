@@ -18,8 +18,10 @@ void ciagbinarny(int n)
      {
       for(tb[n]='0';tb[n]<='1';++tb[n]) ciagbinarny(n);
      }
-   else printf("%s\n",tb);
-   return EXIT_SUCCESS;
+   else
+   {
+    printf("%s\n",tb);
+    }
   }
 
 int main()
