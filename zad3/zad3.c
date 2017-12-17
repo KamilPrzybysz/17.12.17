@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int suma(int a, int b, int *d)
+int suma(int a, int b)
 {
   int aa=a;
   int bb=b;
@@ -11,11 +11,10 @@ int suma(int a, int b, int *d)
   {
     suma_d+=i;
   }
-  
-  *d=suma_d;
+  return suma_d;
 }
 
-int kwadrat(int a, int b, int *k)
+int kwadrat(int a, int b)
 {
   int aa=a;
   int bb=b;
@@ -25,8 +24,7 @@ int kwadrat(int a, int b, int *k)
   {
     suma_k=i*i+suma_k;
   }
-
-  *k=suma_k;
+  return suma_k;
 }
 
 int main()
@@ -46,13 +44,14 @@ int main()
   }
   const int a=poczatek;
   const int b=koniec;
-  int suma_d;
-  int suma_k;
-  suma(a,b, &suma_d);
-  kwadrat(a,b, &suma_k);
+  int sumaaa, kwadrattt;
 
-  printf("Suma liczb z tego przedziału to: %d\n", suma_d);
-  printf("Suma liczb z tego przedziału to: %d\n", suma_k);
+  sumaaa=suma(a,b);
+  printf("Suma liczb z tego przedziału to: %d\n", sumaaa);
+  kwadrattt=kwadrat(a,b);
+  printf("Suma kwadratów liczb z tego przedziału to: %d\n", kwadrattt);
+
+
 
   return 0;
 }
